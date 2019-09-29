@@ -198,20 +198,6 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			return strdup(BOXTYPE);
 		}
 	}
-        else if(strcmp(BOXTYPE, "ustym4kpro") == 0)
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/type");
-		if(strcmp(boxtype_name, "10") == 0)
-		{
-			free(boxtype_name);
-			return strdup("ustym4kpro");
-		}
-		else
-		{
-			free(boxtype_name);
-			return strdup(BOXTYPE);
-		}
-	}
 	return strdup(BOXTYPE);
 }
 
